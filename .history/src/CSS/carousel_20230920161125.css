@@ -1,0 +1,119 @@
+/**
+ * Home Template carousel
+ *
+ * @format
+ */
+
+.Template_Carousel {
+  height: 650px !important;
+  overflow: hidden;
+}
+.Template_Carousel .Item {
+  height: 100% !important;
+  width: 100% !important;
+}
+.Template_Carousel .Item img {
+  width: 100% !important;
+  max-height: 650px !important;
+  height: auto;
+}
+.Template_Carousel .owl-theme {
+  height: 100% !important;
+}
+.Template_Carousel .owl-item {
+  transition: opacity 0.5s;
+}
+
+.Template_Carousel .owl-item.active {
+  opacity: 1;
+}
+
+.Template_Carousel .owl-item:not(.active) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* product Carousel */
+.product-carousel {
+  height: 400px;
+  padding: 30px;
+}
+
+.product-carousel .Item {
+  width: 250px;
+  display: block;
+  margin: auto;
+}
+.product-carousel .Item img {
+  width: 100%;
+  height: 284px;
+}
+.product-carousel .Item p.title {
+  color: #fff;
+  margin: 0;
+  font-size: 18px;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.product-carousel .Item span.price-offer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+.product-carousel .Item span.price-offer .mrp {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.product-carousel .Item span.price-offer .discounted-price {
+  color: #ccc2c0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  text-decoration: line-through;
+  line-height: normal;
+}
+.product-carousel .Item span.price-offer .offer {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.product-carousel .Item span.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.product-carousel .Item span.rating svg {
+  color: #fff602;
+  font-size: 18px;
+}
+.product-carousel .Item span.rating .review {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.product-carousel-containter {
+  position: relative;
+}
+.product-carousel-containter .Prev_Next_Buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.product-carousel-containter .Prev_Next_Buttons img:first{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: t;
+}

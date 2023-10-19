@@ -1,0 +1,255 @@
+/** @format */
+
+.multi-background-heading {
+  width: 100%;
+  padding: 40px;
+  background-image: url(../../public/Image/5.png);
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.multi-background-heading p.heading {
+  color: #fff;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.multi-background-heading .last-button {
+  border-radius: 33px;
+  background: #ff6161;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 200px;
+  border: 1px solid #ff6161;
+  padding: 10px;
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  transform: translate(-50%);
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* -------------------------- */
+
+.Near_You {
+  height: 650px;
+  width: 100%;
+  margin-top: 50px;
+  padding: 20px;
+  padding-top: 50px;
+  position: relative;
+}
+.Near_You .backImg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: -1;
+}
+.Near_You p.title {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.Near_You .three_div {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Near_You .three_div .Main {
+  width: 343px;
+  height: 337px;
+  position: relative;
+}
+.Near_You .three_div .Main img {
+  width: 100%;
+  height: 100%;
+}
+.Near_You .three_div .Main p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ------------------------------ */
+.shop_product {
+  padding: 40px;
+  height: 600px;
+}
+.shop_product .Heading {
+  display: flex;
+  justify-content: space-between;
+}
+.shop_product .Heading p {
+  color: #212121;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.shop_product .Heading select {
+  border-radius: 9px;
+  background: #0a95d6;
+  width: 250px;
+  border: 1px solid #0a95d6;
+  outline: none;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* ----------------------- */
+.Interested_section {
+  height: 550px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  position: relative;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+.Interested_section .backImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: -1;
+  height: 550px;
+}
+
+.Interested_section .left {
+  width: 30%;
+}
+
+.Interested_section .left p.title {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.Interested_section .left .two-sec {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.Interested_section .left .two-sec img {
+  width: 180px;
+}
+
+.Interested_section .Mid {
+  width: 30%;
+}
+.Interested_section .Mid img {
+  width: 300px;
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.Interested_section .Mid p {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.Interested_section .Mid input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #fff;
+  outline: none;
+  display: block;
+  margin: auto;
+}
+
+.Interested_section .right {
+  width: 30%;
+}
+.Interested_section .right p.title {
+  color: #fff;
+  font-size: 50px;
+  text-align: left;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.Interested_section .right p.desc {
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* ---------------------------- */
+.Category_Heading {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.Category_Heading p.title {
+  color: #000;
+  font-size: 23.686px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.Category_Heading button {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  border-radius: 3.948px;
+  background: #ff6161;
+  border: 1px solid #ff6161;
+  padding: 10px;
+}
+
+/* ------------------------------ */
+.Two_Banner_Container{
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Two_Banner_Container .Main {
+  width: 24%;
+}
+.Two_Banner_Container .Main img{
+  max-width: 100%;
+  width: auto;
+  display: block;
+  margin: auto;
+}

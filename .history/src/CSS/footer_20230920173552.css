@@ -1,0 +1,9 @@
+.Footer{
+    background-color: #0A95D6;
+    padding: 20px;
+}
+.Footer ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: square;
+}

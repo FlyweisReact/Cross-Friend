@@ -1,0 +1,13 @@
+/* Home Template carousel */
+.Template_Carousel {
+    max-height: 400px;
+
+ }
+ .Template_Carousel .Item {
+    height: 100%;
+    max-height: 100%;
+ }
+ .Template_Carousel .Item  img{
+    height: 100%;
+    max-height: 100%;
+ }

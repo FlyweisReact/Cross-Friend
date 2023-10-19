@@ -1,0 +1,19 @@
+/**
+ * Home Template carousel
+ *
+ * @format
+ */
+
+.Template_Carousel {
+ height: 156px;
+}
+.Template_Carousel .Item{
+    height: 100%;
+    width: 100%;
+}
+.Template_Carousel .Item img{
+    object-fit: cover; /* or contain, fill, etc. */
+    width: 300px;
+    height: 156px;
+  
+}

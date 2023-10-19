@@ -1,0 +1,14 @@
+.Footer{
+    background-color: #0A95D6;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.Footer ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.Footer .Item{
+    width: 18%;
+}

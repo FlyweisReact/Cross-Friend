@@ -1,0 +1,21 @@
+/**
+ * Home Template carousel
+ *
+ * @format
+ */
+
+.Template_Carousel {
+  height: 300px !important;
+  overflow: hidden;
+}
+.Template_Carousel .Item {
+  height: 100% !important;
+  width: 100% !important;
+}
+.Template_Carousel .Item img {
+  width: 100% !important;
+  height: 100% !important;
+}
+.Template_Carousel .owl-theme{
+    height: 100%;
+}

@@ -1,0 +1,28 @@
+/** @format */
+
+.Footer {
+  background-color: #0a95d6;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.Footer ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.Footer .Item {
+  width: 18%;
+}
+
+.Footer .Item .title {
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.Footer ul li{
+    
+}

@@ -1,0 +1,61 @@
+/** @format */
+
+.multi-background-heading {
+  width: 100%;
+  padding: 40px;
+  background-image: url(../../public/Image/5.png);
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.multi-background-heading p.heading {
+  color: #fff;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.multi-background-heading .last-button {
+  border-radius: 33px;
+  background: #ff6161;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 200px;
+  border: 1px solid #ff6161;
+  padding: 10px;
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  transform: translate(-50%);
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* -------------------------- */
+
+.Near_You {
+  background-image: url(../../public/Image/12.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 400px;
+  width: 100%;
+  margin-top: 50px;
+  padding: 20px;
+  padding-top: 50px;
+}
+
+.Near_You p.title {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.Near_You 

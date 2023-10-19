@@ -1,0 +1,51 @@
+/** @format */
+
+.Footer {
+  background-color: #0a95d6;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.Footer ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.Footer .Item {
+  width: 18%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Footer .Item .title {
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.Footer .Item .desc {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+.Footer ul li {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  gap: 10px;
+}
+
+.Footer .Item img {
+    width: 200px;
+    margin-left: 50px;
+}

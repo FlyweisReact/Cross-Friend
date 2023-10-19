@@ -1,0 +1,118 @@
+/** @format */
+
+.multi-background-heading {
+  width: 100%;
+  padding: 40px;
+  background-image: url(../../public/Image/5.png);
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.multi-background-heading p.heading {
+  color: #fff;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.multi-background-heading .last-button {
+  border-radius: 33px;
+  background: #ff6161;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 200px;
+  border: 1px solid #ff6161;
+  padding: 10px;
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  transform: translate(-50%);
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* -------------------------- */
+
+.Near_You {
+  height: 650px;
+  width: 100%;
+  margin-top: 50px;
+  padding: 20px;
+  padding-top: 50px;
+  position: relative;
+}
+.Near_You .backImg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: -1;
+}
+.Near_You p.title {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.Near_You .three_div {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Near_You .three_div .Main {
+  width: 343px;
+  height: 337px;
+  position: relative;
+}
+.Near_You .three_div .Main img {
+  width: 100%;
+  height: 100%;
+}
+.Near_You .three_div .Main p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ------------------------------ */
+.shop_product {
+  padding: 40px;
+  height: 600px;
+}
+.shop_product .Heading {
+  display: flex;
+  justify-content: space-between;
+}
+.shop_product .Heading p {
+  color: #212121;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.shop_product .Heading select {
+  border-radius: 9px;
+  background: #0a95d6;
+  width: 250px;
+  border: 1px solid #0a95d6;
+  outline: none;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}

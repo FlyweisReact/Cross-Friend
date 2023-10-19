@@ -1,0 +1,51 @@
+/**
+ * Home Template carousel
+ *
+ * @format
+ */
+
+.Template_Carousel {
+  height: 650px !important;
+  overflow: hidden;
+}
+.Template_Carousel .Item {
+  height: 100% !important;
+  width: 100% !important;
+}
+.Template_Carousel .Item img {
+  width: 100% !important;
+  max-height: 650px !important;
+  height: auto;
+}
+.Template_Carousel .owl-theme {
+  height: 100% !important;
+}
+.Template_Carousel .owl-item {
+  transition: opacity 0.5s; 
+}
+
+.Template_Carousel .owl-item.active {
+  opacity: 1;
+}
+
+.Template_Carousel .owl-item:not(.active) {
+  opacity: 0;
+  pointer-events: none; 
+}
+
+
+/* product Carousel */
+.product-carousel {
+    height: 400px;
+    padding: 30px;
+}
+
+.product-carousel .Item {
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+.product-carousel .Item img {
+    width: 200px !important;
+    height: 252px;
+}

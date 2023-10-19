@@ -1,0 +1,33 @@
+/**
+ * Home Template carousel
+ *
+ * @format
+ */
+
+.Template_Carousel {
+  height: 600px !important;
+  overflow: hidden;
+}
+.Template_Carousel .Item {
+  height: 100% !important;
+  width: 100% !important;
+}
+.Template_Carousel .Item img {
+  width: 100% !important;
+  height: 600px !important;
+}
+.Template_Carousel .owl-theme{
+    height: 100% !important;
+}
+.Template_Carousel .owl-item {
+    transition: opacity 0.5s; /* Set the transition duration */
+  }
+  
+  .Template_Carousel .owl-item.active {
+    opacity: 1;
+  }
+  
+  .YourCoTemplate_Carouselmponent .owl-item:not(.active) {
+    opacity: 0;
+    pointer-events: none; /* Disable interactions on non-active items */
+  }

@@ -1,0 +1,7 @@
+.multi-background-heading{
+    width: 100%;
+    padding: 20px;
+    background-image: url(../../public/Image/5.png);
+    max-height: 550px;
+    height: 100%;
+}

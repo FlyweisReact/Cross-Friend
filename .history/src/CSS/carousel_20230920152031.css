@@ -1,0 +1,17 @@
+/**
+ * Home Template carousel
+ *
+ * @format
+ */
+
+.Template_Carousel {
+  height: 156px;
+}
+.Template_Carousel .Item {
+    width: 300px;
+    height: 156px;
+}
+.Template_Carousel .Item img {
+  width: 300px;
+  height: 156px;
+}
