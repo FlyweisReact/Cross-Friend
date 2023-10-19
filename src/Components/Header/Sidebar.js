@@ -20,10 +20,10 @@ import { MdPrivacyTip } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { UpdateProfile } from "../Modal/UpdateProfile";
 import { Store } from "react-notifications-component";
-import { LOGOUT } from "../../Store/Slices/authSlice";
-import { useDispatch } from "react-redux";
+import { LOGOUT, isAuthenticated } from "../../Store/Slices/authSlice";
+import { useDispatch, useSelector } from "react-redux";
 import { getProfile } from "../../Repository/Api";
-import {FaRegAddressCard } from 'react-icons/fa'
+import { FaRegAddressCard } from "react-icons/fa";
 
 const Sidebar = ({ show, handleClose }) => {
   const [openModal, setOpenModal] = useState(false);
@@ -31,9 +31,13 @@ const Sidebar = ({ show, handleClose }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  const isLoggedIn = useSelector(isAuthenticated);
+
   useEffect(() => {
-    getProfile(setProfile);
-  }, []);
+    if (isLoggedIn === true) {
+      getProfile(setProfile);
+    }
+  }, [isLoggedIn]);
 
   function NavigationHandler(link) {
     handleClose();
@@ -72,10 +76,7 @@ const Sidebar = ({ show, handleClose }) => {
             <p>
               Hello {profile?.name} {profile?.middle} {profile?.last}
             </p>
-            <img
-              src={profile?.profilePicture}
-              alt=""
-            />
+            <img src={profile?.profilePicture} alt="" />
           </div>
           <button
             className="update_profile_btn"

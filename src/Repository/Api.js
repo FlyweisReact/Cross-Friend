@@ -40,6 +40,23 @@ export const getProductDetail = async (
   } catch {}
 };
 
+export const getProductDetail2 = async (
+  id,
+  setResponse,
+  setImage,
+  setReviews
+) => {
+  try {
+    const response = await axios.get(`${Baseurl}api/v1/product/by/${id}`);
+    const data = response.data;
+    const image = response.data.product?.imageUrls?.[0];
+    const reviews = response.data.product?.reviews;
+    setReviews(reviews);
+    setImage(image);
+    setResponse(data);
+  } catch {}
+};
+
 export const getBanner = async (setResponse) => {
   try {
     const response = await axios.get(`${Baseurl}api/v1/banner/all`);

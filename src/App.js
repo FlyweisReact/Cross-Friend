@@ -9,7 +9,6 @@ import Category from "./Screens/Category";
 import Wishlist from "./Screens/Wishlist";
 import Cart from "./Screens/Cart";
 import Address from "./Screens/Address";
-
 import './CSS/Header.css'
 import './CSS/carousel.css'
 import './CSS/style.css'

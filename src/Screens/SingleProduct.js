@@ -13,10 +13,13 @@ import {
   decreaseQuan,
   getProductbyQuery,
   getProductDetail,
+  getProductDetail2,
   increaseQuan,
 } from "../Repository/Api";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { FaStarHalfAlt } from "react-icons/fa";
+import { useSelector } from "react-redux";
+import { isAuthenticated } from "../Store/Slices/authSlice";
 
 const SingleProduct = () => {
   const { id } = useParams();
@@ -28,6 +31,8 @@ const SingleProduct = () => {
   const [partyProduct, setPartyProducts] = useState([]);
   const [sizeId, setSizeId] = useState("");
   const [quantity, setQuantity] = useState(0);
+
+  const isLoggedIn = useSelector(isAuthenticated);
 
   const payload = { product: id, sizeId, quantity: 1 };
 
@@ -43,10 +48,17 @@ const SingleProduct = () => {
     getProductDetail(id, setProduct, setImage, setReviews, setQuantity);
   };
 
+  const fetchHandler = () => {
+    getProductDetail2(id, setProduct, setImage, setReviews);
+  };
+
   useEffect(() => {
-    fetchProduct();
-    window.scrollTo(0, 0);
-  }, [id]);
+    if (isLoggedIn === true) {
+      fetchProduct();
+    } else {
+      fetchHandler();
+    }
+  }, [id, isLoggedIn]);
 
   const RatingComponent = (num) => {
     if (num === 0) {
@@ -287,7 +299,7 @@ const SingleProduct = () => {
 
   const addItemWishlist = async () => {
     await addToWishlist(id);
-    fetchProduct()
+    fetchProduct();
   };
 
   return (

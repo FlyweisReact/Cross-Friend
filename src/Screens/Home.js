@@ -1,31 +1,33 @@
 /** @format */
 
-import React , { useState , useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import TemplateCarousel from "../Components/Template/TemplateCarousel";
 import ProductCarousel from "../Components/Template/ProductCarousel";
 import RelatedCarousel from "../Components/Template/RelatedCarousel";
 import { getProductbyQuery } from "../Repository/Api";
 
 const Home = () => {
-  const [ bakeryProducts , setBakeryProducts ] = useState([])
-  const [ partyProduct , setPartyProducts ] = useState([])
+  const [bakeryProducts, setBakeryProducts] = useState([]);
+  const [partyProduct, setPartyProducts] = useState([]);
+  const [cakeProduct, setCakeProduct] = useState([]);
 
   useEffect(() => {
-    getProductbyQuery("Bakery" , setBakeryProducts)
-    getProductbyQuery("Party" , setPartyProducts)
-  },[])
-  
+    getProductbyQuery("Bakery", setBakeryProducts);
+    getProductbyQuery("Party", setPartyProducts);
+    getProductbyQuery("cake", setCakeProduct);
+  }, []);
 
- 
   return (
     <>
       <TemplateCarousel />
 
-      <div className="multi-background-heading">
-        <p className="heading">Cakes</p>
-        <ProductCarousel query='cake' />
-        <button className="last-button">View More</button>
-      </div>
+      {cakeProduct?.length > 0 && (
+        <div className="multi-background-heading">
+          <p className="heading">Cakes</p>
+          <ProductCarousel product={cakeProduct} />
+          <button className="last-button">View More</button>
+        </div>
+      )}
 
       <div className="Near_You">
         <img src="/Image/16.png" alt="" className="backImg" />
@@ -47,25 +49,29 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="shop_product">
-        <div className="Heading">
-          <p>Bakery Product’s</p>
-          <select>
-            <option>Select Bakery Option's</option>
-            <option></option>
-          </select>
+      {bakeryProducts?.length > 0 && (
+        <div className="shop_product">
+          <div className="Heading">
+            <p>Bakery Product’s</p>
+            <select>
+              <option>Select Bakery Option's</option>
+              <option></option>
+            </select>
+          </div>
+
+          <RelatedCarousel data={bakeryProducts} />
         </div>
+      )}
 
-        <RelatedCarousel data={bakeryProducts} />
-      </div>
+      {partyProduct?.length > 0 && (
+        <div className="shop_product">
+          <div className="Heading">
+            <p>Party Product’s</p>
+          </div>
 
-      <div className="shop_product">
-        <div className="Heading">
-          <p>Party Product’s</p>
+          <RelatedCarousel data={partyProduct} />
         </div>
-
-        <RelatedCarousel data={partyProduct} />
-      </div>
+      )}
 
       <div className="Interested_section">
         <div className="left">

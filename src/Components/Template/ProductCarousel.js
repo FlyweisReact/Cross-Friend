@@ -1,15 +1,13 @@
 /** @format */
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef } from "react";
 import OwlCarousel from "react-owl-carousel";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
-import { getProductbyQuery } from "../../Repository/Api";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const ProductCarousel = ({ query }) => {
+const ProductCarousel = ({ product }) => {
   const carouselRef = useRef(null);
-  const [products, setProducts] = useState([]);
 
   const options = {
     items: 4,
@@ -30,14 +28,6 @@ const ProductCarousel = ({ query }) => {
       carouselRef.current.prev(500);
     }
   };
-
-  const fetchHandler = () => {
-    getProductbyQuery(query, setProducts);
-  };
-
-  useEffect(() => {
-    fetchHandler();
-  }, []);
 
   const RatingComponent = (num) => {
     if (num === 0) {
@@ -266,13 +256,13 @@ const ProductCarousel = ({ query }) => {
         {...options}
         ref={carouselRef}
       >
-        {products?.map((i, index) => (
+        {product?.map((i, index) => (
           <div className="Item" key={index}>
             <Link to={`/product/${i._id}`}>
               <img src={i.imageUrls?.[0]} alt="" />
             </Link>
-            <Link to={`/product/${i._id}`} >
-            <p className="title"> {i.name} </p>
+            <Link to={`/product/${i._id}`}>
+              <p className="title"> {i.name} </p>
             </Link>
             <span className="price-offer">
               <span className="mrp">₹{i.price} </span>
