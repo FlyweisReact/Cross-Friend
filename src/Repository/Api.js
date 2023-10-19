@@ -190,7 +190,7 @@ export const addToCart = async (payload) => {
 
 export const getCart = async (setResponse) => {
   try {
-    const response = await axios.get(`${Baseurl}api/v1/cart/getCart`, {
+    const response = await axios.get(`${Baseurl}api/v1/cart/getmyCart`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("Token")}`,
       },

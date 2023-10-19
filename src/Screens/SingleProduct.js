@@ -345,7 +345,7 @@ const SingleProduct = () => {
           </p>
 
           <div className="buttons">
-            {quantity > 0 ? (
+            {/* {quantity > 0 ? (
               <div className="quantity_button">
                 <span className="minus" onClick={() => decreaseInCart()}>
                   {" "}
@@ -358,10 +358,11 @@ const SingleProduct = () => {
                 </span>
               </div>
             ) : (
-              <button className="add_btn" onClick={() => cartHandler()}>
-                Add
-              </button>
-            )}
+              
+            )} */}
+            <button className="add_btn" onClick={() => cartHandler()}>
+              Add
+            </button>
 
             {product?.product?.isFavourate === false ? (
               <button

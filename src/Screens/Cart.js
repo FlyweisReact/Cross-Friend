@@ -2,7 +2,13 @@
 
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { getCart, RemoveItemCart } from "../Repository/Api";
+import {
+  decreaseQuan,
+  getCart,
+  increaseQuan,
+  RemoveItemCart,
+} from "../Repository/Api";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
 const Cart = () => {
   const navigate = useNavigate();
@@ -18,6 +24,18 @@ const Cart = () => {
 
   const removeItem = async (productId, sizeId) => {
     await RemoveItemCart(productId, sizeId);
+    fetchHandler();
+  };
+
+  const increaseInCart = async (id, sizeId) => {
+    const payload = { product: id, sizeId };
+    await increaseQuan(payload);
+    fetchHandler();
+  };
+
+  const decreaseInCart = async (id, sizeId) => {
+    const payload = { product: id, sizeId };
+    await decreaseQuan(payload);
     fetchHandler();
   };
 
@@ -66,19 +84,15 @@ const Cart = () => {
                       <img
                         src="/Image/71.png"
                         alt=""
-                        onClick={() => removeItem(i.product?._id, i.size)}
+                        onClick={() => removeItem(i.product?._id, i.size?._id)}
                         style={{ cursor: "pointer" }}
                       />
                     </div>
 
                     <div className="price-container">
                       <div className="left">
-                        {/* <p className="discounted-price"> {i.product?.price} </p> */}
-                        <p className="real-price"> ₹{i.product?.price} </p>
-                        {/* <p className="off"> {i.product?.minDiscount} </p> */}
+                        <p className="real-price"> ₹{i.size?.price} </p>
                       </div>
-
-                      {/* <p className="gram"> {i.gram} </p> */}
                     </div>
 
                     <p
@@ -91,6 +105,19 @@ const Cart = () => {
                     >
                       Quantity : {i.quantity}
                     </p>
+
+                    <div className="quantity_button mt-2">
+                      <span className="minus" onClick={() => decreaseInCart(i.product?._id , i.size?._id)}>
+                        {" "}
+                        <AiOutlineMinus />{" "}
+                      </span>
+                      <span> {i.quantity} </span>
+                      <span className="plus" onClick={() => increaseInCart(i.product?._id , i.size?._id)}>
+                        {" "}
+                        <AiOutlinePlus />{" "}
+                      </span>
+                    </div>
+
                     {/* <p className="few_left">Only Few Left!</p> */}
                   </div>
                 </div>
