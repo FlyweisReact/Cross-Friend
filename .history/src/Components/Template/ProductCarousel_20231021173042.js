@@ -250,6 +250,7 @@ const ProductCarousel = ({ product }) => {
   };
 
 
+  console.log(product)
   return (
     <div className="product-carousel-containter">
       <OwlCarousel

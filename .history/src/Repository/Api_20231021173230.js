@@ -34,8 +34,7 @@ export const getProductDetail = async (
     const image = response.data.product?.images?.[0];
     const reviews = response.data.product?.reviews;
     const quantity = response.data?.quantityInCart;
-    const price= response.data?.product?.sizePrice?.[0]?.price
-    setPrice(price)
+    console.log(data)
     setQuantity(quantity);
     setReviews(reviews);
     setImage(image);

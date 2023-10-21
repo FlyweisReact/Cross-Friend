@@ -250,6 +250,7 @@ const ProductCarousel = ({ product }) => {
   };
 
 
+  
   return (
     <div className="product-carousel-containter">
       <OwlCarousel
@@ -266,7 +267,7 @@ const ProductCarousel = ({ product }) => {
               <p className="title"> {i.name} </p>
             </Link>
             <span className="price-offer">
-              <span className="mrp">₹{i.sizePrice?.[0]?.price} </span>
+              <span className="mrp">₹{i.price} </span>
               <span className="discounted-price">
                 {" "}
                 {i.discountPrice ? `₹${i.discountPrice}` : ""}{" "}

@@ -31,7 +31,6 @@ const SingleProduct = () => {
   const [partyProduct, setPartyProducts] = useState([]);
   const [sizeId, setSizeId] = useState("");
   const [quantity, setQuantity] = useState(0);
-  const [price, setPrice] = useState(0);
 
   const isLoggedIn = useSelector(isAuthenticated);
 
@@ -46,18 +45,11 @@ const SingleProduct = () => {
   }, []);
 
   const fetchProduct = () => {
-    getProductDetail(
-      id,
-      setProduct,
-      setImage,
-      setReviews,
-      setQuantity,
-      setPrice
-    );
+    getProductDetail(id, setProduct, setImage, setReviews, setQuantity);
   };
 
   const fetchHandler = () => {
-    getProductDetail2(id, setProduct, setImage, setReviews, setPrice);
+    getProductDetail2(id, setProduct, setImage, setReviews);
   };
 
   useEffect(() => {
@@ -293,6 +285,18 @@ const SingleProduct = () => {
     fetchProduct();
   };
 
+  const increaseInCart = async () => {
+    const payload = { product: id, sizeId };
+    await increaseQuan(payload);
+    fetchProduct();
+  };
+
+  const decreaseInCart = async () => {
+    const payload = { product: id, sizeId };
+    await decreaseQuan(payload);
+    fetchProduct();
+  };
+
   const addItemWishlist = async () => {
     await addToWishlist(id);
     fetchProduct();
@@ -319,7 +323,7 @@ const SingleProduct = () => {
             {RatingComponent(product?.product?.ratings)}
             <p>({product?.product?.numOfReviews} Review)</p>
           </div>
-          <p className="price">₹ {price} </p>
+          <p className="price">₹{product?.product?.price} </p>
           <p className="price" style={{ fontWeight: "600", fontSize: "20px" }}>
             Select Size
           </p>
@@ -328,10 +332,7 @@ const SingleProduct = () => {
               <p
                 key={index}
                 className={sizeId === i._id ? "active" : ""}
-                onClick={() => {
-                  setPrice(i.price);
-                  setSizeId(i._id);
-                }}
+                onClick={() => setSizeId(i._id)}
               >
                 {" "}
                 {i.weight}{" "}
@@ -344,6 +345,7 @@ const SingleProduct = () => {
           </p>
 
           <div className="buttons">
+      
             <button className="add_btn" onClick={() => cartHandler()}>
               Add
             </button>

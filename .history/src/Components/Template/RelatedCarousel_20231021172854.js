@@ -37,7 +37,7 @@ const RelatedCarousel = ({data}) => {
       {data?.map((i , index) => (
         <div className="Item" key={index} >
         <Link to={`/product/${i._id}`}>
-          <img src={i.images?.[0]} alt=" " />
+          <img src={i.image?.[0]} alt=" " />
           </Link>
           <Link to={`/product/${i._id}`}>
           <p className="title"> {i.name} </p>

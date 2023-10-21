@@ -21,8 +21,7 @@ export const getProductDetail = async (
   setResponse,
   setImage,
   setReviews,
-  setQuantity,
-  setPrice
+  setQuantity
 ) => {
   try {
     const response = await axios.get(`${Baseurl}api/v1/product/${id}`, {
@@ -34,8 +33,7 @@ export const getProductDetail = async (
     const image = response.data.product?.images?.[0];
     const reviews = response.data.product?.reviews;
     const quantity = response.data?.quantityInCart;
-    const price= response.data?.product?.sizePrice?.[0]?.price
-    setPrice(price)
+    console.log(data)
     setQuantity(quantity);
     setReviews(reviews);
     setImage(image);
@@ -55,8 +53,7 @@ export const getProductDetail2 = async (
     const data = response.data;
     const image = response.data.product?.images?.[0];
     const reviews = response.data.product?.reviews;
-    const price= response.data?.product?.sizePrice?.[0]?.price
-    setPrice(price)
+    const price= response.data?.product?.sizePrice?.[0]?.
     setReviews(reviews);
     setImage(image);
     setResponse(data);
