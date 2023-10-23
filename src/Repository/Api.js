@@ -12,6 +12,7 @@ export const getProductbyQuery = async (query, setResponse) => {
       `${Baseurl}api/v1/allproducts/search?search=${query}`
     );
     const data = response.data.apiFeature;
+    console.log(data)
     setResponse(data);
   } catch {}
 };

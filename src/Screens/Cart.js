@@ -75,7 +75,7 @@ const Cart = () => {
               {cart?.items?.map((i, index) => (
                 <div className="Cart_Items" key={index}>
                   <div className="img-container">
-                    <img src={i.product?.imageUrls?.[0]} alt="" />
+                    <img src={i.product?.images?.[0]} alt="" />
                   </div>
 
                   <div className="text-container">
