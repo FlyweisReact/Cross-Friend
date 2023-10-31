@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 const RelatedCarousel = ({ data }) => {
   const carouselRef = useRef(null);
 
-
   const options = {
     items: 3,
     margin: 10,

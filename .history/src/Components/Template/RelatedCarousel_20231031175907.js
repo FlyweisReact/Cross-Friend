@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 const RelatedCarousel = ({ data }) => {
   const carouselRef = useRef(null);
 
-
   const options = {
     items: 3,
     margin: 10,
@@ -45,19 +44,15 @@ const RelatedCarousel = ({ data }) => {
             </Link>
             <span className="price-offer">
               <span className="mrp">₹{i.sizePrice?.[0]?.price} </span>
-              {i.discountPrice > 0 && (
-                <span className="discounted-price">
-                  {" "}
-                  {i.discountPrice ? `₹${i.discountPrice}` : ""}{" "}
-                </span>
-              )}
-
-              {i.minDiscount > 0 && (
-                <span className="offer">
-                  {" "}
-                  Min {i.minDiscount ? `${i.minDiscount}%` : ""} off{" "}
-                </span>
-              )}
+              {i.discountPrice >}
+              <span className="discounted-price">
+                {" "}
+                {i.discountPrice ? `₹${i.discountPrice}` : ""}{" "}
+              </span>
+              <span className="offer">
+                {" "}
+                Min {i.minDiscount ? `${i.minDiscount}%` : ""} off{" "}
+              </span>
             </span>
           </div>
         ))}

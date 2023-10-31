@@ -2,11 +2,10 @@
 
 import React, { useRef } from "react";
 import OwlCarousel from "react-owl-carousel";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
-const RelatedCarousel = ({ data }) => {
+const RelatedCarousel = ({data}) => {
   const carouselRef = useRef(null);
-
 
   const options = {
     items: 3,
@@ -35,32 +34,25 @@ const RelatedCarousel = ({ data }) => {
         {...options}
         ref={carouselRef}
       >
-        {data?.map((i, index) => (
-          <div className="Item" key={index}>
-            <Link to={`/product/${i._id}`}>
-              <img src={i.images?.[0]} alt=" " />
-            </Link>
-            <Link to={`/product/${i._id}`}>
-              <p className="title"> {i.name} </p>
-            </Link>
-            <span className="price-offer">
-              <span className="mrp">₹{i.sizePrice?.[0]?.price} </span>
-              {i.discountPrice > 0 && (
-                <span className="discounted-price">
-                  {" "}
-                  {i.discountPrice ? `₹${i.discountPrice}` : ""}{" "}
-                </span>
-              )}
+      {data?.map((i , index) => (
+        <div className="Item" key={index} >
+        <Link to={`/product/${i._id}`}>
+          <img src={i.images?.[0]} alt=" " />
+          </Link>
+          <Link to={`/product/${i._id}`}>
+          <p className="title"> {i.name} </p>
+          </Link> 
+          <span className="price-offer">
+            <span className="mrp">₹{i.sizePrice?.[0]?.price} </span>
+            <span className="discounted-price">  {i.discountPrice ? `₹${i.discount}` : "" } </span>
+            <span className="offer"> Min {i.minDiscount ? `${i.minDiscount}%` :'' } off </span>
+          </span>
+        </div>
 
-              {i.minDiscount > 0 && (
-                <span className="offer">
-                  {" "}
-                  Min {i.minDiscount ? `${i.minDiscount}%` : ""} off{" "}
-                </span>
-              )}
-            </span>
-          </div>
-        ))}
+      ))}
+     
+     
+        
       </OwlCarousel>
       <div className="Prev_Next_Buttons">
         <img
