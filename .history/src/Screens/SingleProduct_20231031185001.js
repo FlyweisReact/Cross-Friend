@@ -298,7 +298,6 @@ const SingleProduct = () => {
     fetchProduct();
   };
 
-
   return (
     <>
       <CustomizeModal show={modalShow} onHide={() => setModalShow(false)} />
@@ -348,9 +347,20 @@ const SingleProduct = () => {
             <button className="add_btn" onClick={() => cartHandler()}>
               Add
             </button>
-            <button className="customize_btn" onClick={() => addItemWishlist()}>
-              Add to Wishlist
-            </button>
+            {console.log(product?.product?.isFavourite)}
+            {product?.product?.isFavourate === false && (
+              <button
+                className="customize_btn"
+                onClick={() => addItemWishlist()}
+              >
+                Add to Wishlist
+              </button>
+            )}  <button
+                className="customize_btn"
+                onClick={() => addItemWishlist()}
+              >
+                Add to Wishlist
+              </button>
 
             <button
               className="customize_btn"

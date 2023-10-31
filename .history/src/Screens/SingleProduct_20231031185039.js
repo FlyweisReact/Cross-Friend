@@ -298,7 +298,6 @@ const SingleProduct = () => {
     fetchProduct();
   };
 
-
   return (
     <>
       <CustomizeModal show={modalShow} onHide={() => setModalShow(false)} />

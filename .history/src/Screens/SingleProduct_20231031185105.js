@@ -298,6 +298,7 @@ const SingleProduct = () => {
     fetchProduct();
   };
 
+  console.log()
 
   return (
     <>
