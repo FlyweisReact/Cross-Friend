@@ -91,12 +91,12 @@ const Address = () => {
          
 
           <div className="Items">
-            {/* <p className="title">Payment</p>
+            <p className="title">Payment</p>
             <p className="desc">
               Master Card <br />
               **** **** **** 543
             </p>
-            <p className="Change">Change</p> */}
+            <p className="Change">Change</p>
           </div>
 
           <button className="place_order" onClick={() => handleSubmit()}>

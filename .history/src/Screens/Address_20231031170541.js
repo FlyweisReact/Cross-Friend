@@ -88,15 +88,21 @@ const Address = () => {
         </div>
 
         <div className="right_container">
-         
+          {/* <div className="Items">
+            <p className="title">Shipping Address</p>
+            <p className="desc">
+              {street1} , {street2} , {city} , {pinCode} , {state} , {country}
+            </p>
+            <p className="Change">Change</p>
+          </div> */}
 
           <div className="Items">
-            {/* <p className="title">Payment</p>
+            <p className="title">Payment</p>
             <p className="desc">
               Master Card <br />
               **** **** **** 543
             </p>
-            <p className="Change">Change</p> */}
+            <p className="Change">Change</p>
           </div>
 
           <button className="place_order" onClick={() => handleSubmit()}>

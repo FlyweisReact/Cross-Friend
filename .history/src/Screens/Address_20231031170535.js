@@ -60,7 +60,59 @@ const Address = () => {
                 ))}
               </select>
             </div>
-          
+            {/* <div>
+              <p className="title">Street 1</p>
+              <input
+                type="text"
+                placeholder="Street, Lane"
+                onChange={(e) => setStreet1(e.target.value)}
+              />
+            </div>
+            <div className="mt-3">
+              <p className="title">Street 2</p>
+              <input
+                type="text"
+                placeholder="XYZ Road"
+                onChange={(e) => setStreet2(e.target.value)}
+              />
+            </div>
+
+            <div className="two_sec">
+              <div>
+                <p className="title">City</p>
+                <input
+                  type="text"
+                  placeholder=" Delhi"
+                  onChange={(e) => setCity(e.target.value)}
+                />
+              </div>
+              <div>
+                <p className="title">Pincode</p>
+                <input
+                  type="text"
+                  placeholder="201009"
+                  onChange={(e) => setPinCode(e.target.value)}
+                />
+              </div>
+            </div>
+            <div className="two_sec">
+              <div>
+                <p className="title">State</p>
+                <input
+                  type="text"
+                  placeholder=" Delhi"
+                  onChange={(e) => setState(e.target.value)}
+                />
+              </div>
+              <div>
+                <p className="title">Country</p>
+                <input
+                  type="text"
+                  placeholder="India"
+                  onChange={(e) => setCountry(e.target.value)}
+                />
+              </div>
+            </div> */}
           </form>
 
           <div className="Heading mt-3">
@@ -88,15 +140,21 @@ const Address = () => {
         </div>
 
         <div className="right_container">
-         
+          {/* <div className="Items">
+            <p className="title">Shipping Address</p>
+            <p className="desc">
+              {street1} , {street2} , {city} , {pinCode} , {state} , {country}
+            </p>
+            <p className="Change">Change</p>
+          </div> */}
 
           <div className="Items">
-            {/* <p className="title">Payment</p>
+            <p className="title">Payment</p>
             <p className="desc">
               Master Card <br />
               **** **** **** 543
             </p>
-            <p className="Change">Change</p> */}
+            <p className="Change">Change</p>
           </div>
 
           <button className="place_order" onClick={() => handleSubmit()}>
