@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { myOrder } from "../Repository/Api";
-import { Badge } from "react-bootstrap";
+import { Ba}
 
 const Orders = () => {
   const [data, setData] = useState([]);
@@ -12,7 +12,8 @@ const Orders = () => {
     myOrder(setData);
   }, []);
 
-  console.log(data);
+
+  console.log(data)
 
   return (
     <div className="cart_container">
@@ -25,7 +26,7 @@ const Orders = () => {
           i.products?.map((item, index) => (
             <div className="Cart_Items" key={index}>
               <div className="img-container">
-                <img src={item.product?.images?.[0]} alt="" />
+                <img src={item.product?.imageUrls?.[0]} alt="" />
               </div>
 
               <div className="text-container">
@@ -35,37 +36,14 @@ const Orders = () => {
 
                 <div className="price-container">
                   <div className="left">
-                    <p className="real-price"> ₹{item?.sizeDetails?.price} </p>
-                    <p className="real-price">
-                      {" "}
-                      Weight : {item?.sizeDetails?.weight}{" "}
-                    </p>
-                    <p className="off"> Quantity : {item.quantity} </p>
+                    <p className="discounted-price"> ₹{item?.product?.discountPrice} </p>
+                    <p className="real-price"> ₹{item?.product?.price} </p>
+                    <p className="off"> {item?.product?.minDiscount}% off  </p>
                   </div>
                 </div>
 
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                  <Badge
-                    style={{
-                      textTransform: "uppercase",
-                      marginTop: "10px",
-                      padding: "10px",
-                      width: "200px",
-                    }}
-                  >
-                    Order Status : {i?.orderStatus}
-                  </Badge>
-
-                  <Badge
-                    style={{
-                      textTransform: "uppercase",
-                      marginTop: "10px",
-                      padding: "10px",
-                      width: "200px",
-                    }}
-                  >
-                    Payment Status : {i?.paymentStatus}
-                  </Badge>
+                <div className="title-text">
+                  <p> {i?.orderStatus} </p>
                 </div>
               </div>
             </div>

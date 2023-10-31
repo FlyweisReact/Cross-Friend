@@ -35,6 +35,10 @@ const Orders = () => {
 
                 <div className="price-container">
                   <div className="left">
+                    {/* <p className="discounted-price">
+                      {" "}
+                      ₹{item?.product?.discountPrice}{" "}
+                    </p> */}
                     <p className="real-price"> ₹{item?.sizeDetails?.price} </p>
                     <p className="real-price">
                       {" "}

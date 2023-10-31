@@ -107,12 +107,24 @@ const Cart = () => {
                     </p>
 
                     <div className="quantity_button mt-2">
-                      <span className="minus" onClick={() => decreaseInCart(i.product?._id , i.size?._id)}>
+                      <span
+                        className="minus"
+                        onClick={() => {
+                          if (i.quantity > 1) {
+                            decreaseInCart(i.product?._id, i.size?._id);
+                          }
+                        }}
+                      >
                         {" "}
                         <AiOutlineMinus />{" "}
                       </span>
                       <span> {i.quantity} </span>
-                      <span className="plus" onClick={() => increaseInCart(i.product?._id , i.size?._id)}>
+                      <span
+                        className="plus"
+                        onClick={() =>
+                          increaseInCart(i.product?._id, i.size?._id)
+                        }
+                      >
                         {" "}
                         <AiOutlinePlus />{" "}
                       </span>

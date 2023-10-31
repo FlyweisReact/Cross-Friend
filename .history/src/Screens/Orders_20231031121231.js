@@ -25,7 +25,7 @@ const Orders = () => {
           i.products?.map((item, index) => (
             <div className="Cart_Items" key={index}>
               <div className="img-container">
-                <img src={item.product?.images?.[0]} alt="" />
+                <img src={item.product?.imageUrls?.[0]} alt="" />
               </div>
 
               <div className="text-container">
@@ -35,12 +35,12 @@ const Orders = () => {
 
                 <div className="price-container">
                   <div className="left">
-                    <p className="real-price"> ₹{item?.sizeDetails?.price} </p>
-                    <p className="real-price">
+                    <p className="discounted-price">
                       {" "}
-                      Weight : {item?.sizeDetails?.weight}{" "}
+                      ₹{item?.product?.discountPrice}{" "}
                     </p>
-                    <p className="off"> Quantity : {item.quantity} </p>
+                    <p className="real-price"> ₹{item?.product?.price} </p>
+                    <p className="off"> {item?.product?.minDiscount}% off </p>
                   </div>
                 </div>
 

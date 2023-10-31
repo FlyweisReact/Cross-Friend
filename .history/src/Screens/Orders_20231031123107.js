@@ -12,7 +12,7 @@ const Orders = () => {
     myOrder(setData);
   }, []);
 
-  console.log(data);
+  console.log(data)
 
   return (
     <div className="cart_container">
@@ -35,12 +35,12 @@ const Orders = () => {
 
                 <div className="price-container">
                   <div className="left">
-                    <p className="real-price"> ₹{item?.sizeDetails?.price} </p>
-                    <p className="real-price">
+                    <p className="discounted-price">
                       {" "}
-                      Weight : {item?.sizeDetails?.weight}{" "}
+                      ₹{item?.product?.discountPrice}{" "}
                     </p>
-                    <p className="off"> Quantity : {item.quantity} </p>
+                    <p className="real-price"> ₹{item?.product?.price} </p>
+                    <p className="off"> Quantity : {} </p>
                   </div>
                 </div>
 
