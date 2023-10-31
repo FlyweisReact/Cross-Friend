@@ -81,7 +81,6 @@ const Orders = () => {
                       textTransform: "uppercase",
                     }}
                     onClick={() => {
-                      setRating(1)
                       setPrice(item?.sizeDetails?.price);
                       setOrderId(i.orderId);
                       setProduct(item.product);
@@ -112,7 +111,7 @@ const Orders = () => {
             </div>
 
             <div className="star-container">
-              {rating >= 1 ? (
+              {rating === 1 ? (
                 <AiFillStar
                   onClick={() => setRating(1)}
                   className="fill_star"
@@ -123,7 +122,7 @@ const Orders = () => {
                   onClick={() => setRating(1)}
                 />
               )}
-              {rating >= 2? (
+              {rating === 1 ? (
                 <AiFillStar
                   onClick={() => setRating(2)}
                   className="fill_star"
@@ -134,37 +133,37 @@ const Orders = () => {
                   onClick={() => setRating(2)}
                 />
               )}
-              {rating >= 3 ? (
+              {rating === 1 ? (
                 <AiFillStar
-                  onClick={() => setRating(3)}
+                  onClick={() => setRating(2)}
                   className="fill_star"
                 />
               ) : (
                 <AiOutlineStar
                   className="hollow_star"
-                  onClick={() => setRating(3)}
+                  onClick={() => setRating(1)}
                 />
               )}
-              {rating >=4  ? (
+              {rating === 1 ? (
                 <AiFillStar
-                  onClick={() => setRating(4)}
+                  onClick={() => setRating(1)}
                   className="fill_star"
                 />
               ) : (
                 <AiOutlineStar
                   className="hollow_star"
-                  onClick={() => setRating(4)}
+                  onClick={() => setRating(1)}
                 />
               )}
-              {rating >=5 ? (
+              {rating === 1 ? (
                 <AiFillStar
-                  onClick={() => setRating(5)}
+                  onClick={() => setRating(1)}
                   className="fill_star"
                 />
               ) : (
                 <AiOutlineStar
                   className="hollow_star"
-                  onClick={() => setRating(5)}
+                  onClick={() => setRating(1)}
                 />
               )}
             </div>

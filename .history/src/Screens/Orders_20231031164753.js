@@ -81,7 +81,6 @@ const Orders = () => {
                       textTransform: "uppercase",
                     }}
                     onClick={() => {
-                      setRating(1)
                       setPrice(item?.sizeDetails?.price);
                       setOrderId(i.orderId);
                       setProduct(item.product);
@@ -156,7 +155,7 @@ const Orders = () => {
                   onClick={() => setRating(4)}
                 />
               )}
-              {rating >=5 ? (
+              {rating >5  ? (
                 <AiFillStar
                   onClick={() => setRating(5)}
                   className="fill_star"

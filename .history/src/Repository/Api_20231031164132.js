@@ -587,20 +587,14 @@ export const orderSuc = async (id, navigate) => {
   } catch {}
 };
 
-export const giveReview = async (orderId, rating, comment) => {
+
+export const giveReview = async (orderId , rating , comment) => {
   try {
-    const response = await axios.post(
-      `${Baseurl}api/v1/orders/${orderId}/reviews`,
-      {
-        rating,
-        comment,
+    const response = await axios.delete(`${Baseurl}api/v1/orders/${orderId}/reviews`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("Token")}`,
       },
-      {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("Token")}`,
-        },
-      }
-    );
+    });
     Store.addNotification({
       title: "",
       message: "Thank you for you'r Review",

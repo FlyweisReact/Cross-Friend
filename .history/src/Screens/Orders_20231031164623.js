@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useState, useEffect } from "react";
-import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import { AiFillStar ,AiOutlineStar } from "react-icons/ai";
 import { giveReview, myOrder } from "../Repository/Api";
 import { Badge, Button } from "react-bootstrap";
 
@@ -81,7 +81,6 @@ const Orders = () => {
                       textTransform: "uppercase",
                     }}
                     onClick={() => {
-                      setRating(1)
                       setPrice(item?.sizeDetails?.price);
                       setOrderId(i.orderId);
                       setProduct(item.product);
@@ -112,61 +111,15 @@ const Orders = () => {
             </div>
 
             <div className="star-container">
-              {rating >= 1 ? (
-                <AiFillStar
-                  onClick={() => setRating(1)}
-                  className="fill_star"
-                />
-              ) : (
-                <AiOutlineStar
-                  className="hollow_star"
-                  onClick={() => setRating(1)}
-                />
-              )}
-              {rating >= 2? (
-                <AiFillStar
-                  onClick={() => setRating(2)}
-                  className="fill_star"
-                />
-              ) : (
-                <AiOutlineStar
-                  className="hollow_star"
-                  onClick={() => setRating(2)}
-                />
-              )}
-              {rating >= 3 ? (
-                <AiFillStar
-                  onClick={() => setRating(3)}
-                  className="fill_star"
-                />
-              ) : (
-                <AiOutlineStar
-                  className="hollow_star"
-                  onClick={() => setRating(3)}
-                />
-              )}
-              {rating >=4  ? (
-                <AiFillStar
-                  onClick={() => setRating(4)}
-                  className="fill_star"
-                />
-              ) : (
-                <AiOutlineStar
-                  className="hollow_star"
-                  onClick={() => setRating(4)}
-                />
-              )}
-              {rating >=5 ? (
-                <AiFillStar
-                  onClick={() => setRating(5)}
-                  className="fill_star"
-                />
-              ) : (
-                <AiOutlineStar
-                  className="hollow_star"
-                  onClick={() => setRating(5)}
-                />
-              )}
+            {
+              rating === 1 ? 
+              <AiFillStar onClick={() => setRating(1)} className='fill_star' />
+ : 
+            }
+              <AiFillStar onClick={() => setRating(2)} />
+              <AiFillStar onClick={() => setRating(3)} />
+              <AiFillStar onClick={() => setRating(4)} />
+              <AiFillStar onClick={() => setRating(5)} />
             </div>
 
             <textarea

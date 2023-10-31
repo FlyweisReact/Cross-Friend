@@ -586,33 +586,3 @@ export const orderSuc = async (id, navigate) => {
     navigate("/");
   } catch {}
 };
-
-export const giveReview = async (orderId, rating, comment) => {
-  try {
-    const response = await axios.post(
-      `${Baseurl}api/v1/orders/${orderId}/reviews`,
-      {
-        rating,
-        comment,
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("Token")}`,
-        },
-      }
-    );
-    Store.addNotification({
-      title: "",
-      message: "Thank you for you'r Review",
-      type: "success",
-      insert: "top",
-      container: "top-center",
-      animationIn: ["animate__animated", "animate__fadeIn"],
-      animationOut: ["animate__animated", "animate__fadeOut"],
-      dismiss: {
-        duration: 3000,
-        onScreen: true,
-      },
-    });
-  } catch {}
-};

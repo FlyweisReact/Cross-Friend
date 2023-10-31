@@ -1,8 +1,8 @@
 /** @format */
 
 import React, { useState, useEffect } from "react";
-import { AiFillStar, AiOutlineStar } from "react-icons/ai";
-import { giveReview, myOrder } from "../Repository/Api";
+import { AiFillStar } from "react-icons/ai";
+import { myOrder } from "../Repository/Api";
 import { Badge, Button } from "react-bootstrap";
 
 const Orders = () => {
@@ -11,17 +11,17 @@ const Orders = () => {
   const [review, seReview] = useState(false);
   const [orderId, setOrderId] = useState("");
   const [product, setProduct] = useState({});
-  const [price, setPrice] = useState("");
-  const [rating, setRating] = useState(0);
-  const [comment, setComment] = useState("");
+  const [ price , setPrice ] = useState("")
 
   useEffect(() => {
     myOrder(setData);
   }, []);
 
-  const submitHandler = () => {
-    giveReview(orderId, rating, comment);
-  };
+
+  const submitHandler =  () => {
+    giveReview
+  }
+
 
   return (
     <div className="cart_container">
@@ -36,6 +36,7 @@ const Orders = () => {
               <div className="img-container">
                 <img src={item.product?.images?.[0]} alt="" />
               </div>
+
 
               <div className="text-container">
                 <div className="title-text">
@@ -81,8 +82,7 @@ const Orders = () => {
                       textTransform: "uppercase",
                     }}
                     onClick={() => {
-                      setRating(1)
-                      setPrice(item?.sizeDetails?.price);
+                      setPrice(item?.sizeDetails?.price)
                       setOrderId(i.orderId);
                       setProduct(item.product);
                       seReview(true);
@@ -112,72 +112,17 @@ const Orders = () => {
             </div>
 
             <div className="star-container">
-              {rating >= 1 ? (
-                <AiFillStar
-                  onClick={() => setRating(1)}
-                  className="fill_star"
-                />
-              ) : (
-                <AiOutlineStar
-                  className="hollow_star"
-                  onClick={() => setRating(1)}
-                />
-              )}
-              {rating >= 2? (
-                <AiFillStar
-                  onClick={() => setRating(2)}
-                  className="fill_star"
-                />
-              ) : (
-                <AiOutlineStar
-                  className="hollow_star"
-                  onClick={() => setRating(2)}
-                />
-              )}
-              {rating >= 3 ? (
-                <AiFillStar
-                  onClick={() => setRating(3)}
-                  className="fill_star"
-                />
-              ) : (
-                <AiOutlineStar
-                  className="hollow_star"
-                  onClick={() => setRating(3)}
-                />
-              )}
-              {rating >=4  ? (
-                <AiFillStar
-                  onClick={() => setRating(4)}
-                  className="fill_star"
-                />
-              ) : (
-                <AiOutlineStar
-                  className="hollow_star"
-                  onClick={() => setRating(4)}
-                />
-              )}
-              {rating >=5 ? (
-                <AiFillStar
-                  onClick={() => setRating(5)}
-                  className="fill_star"
-                />
-              ) : (
-                <AiOutlineStar
-                  className="hollow_star"
-                  onClick={() => setRating(5)}
-                />
-              )}
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
             </div>
 
-            <textarea
-              placeholder="Write your Review"
-              onChange={(e) => setComment(e.target.value)}
-            />
+            <textarea placeholder="Write your Review" />
           </div>
 
-          <button className="sm-btn" onClick={() => submitHandler()}>
-            Submit
-          </button>
+          <button className="sm-btn">Submit</button>
         </div>
       )}
     </div>

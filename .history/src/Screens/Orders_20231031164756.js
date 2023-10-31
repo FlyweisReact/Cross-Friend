@@ -81,7 +81,6 @@ const Orders = () => {
                       textTransform: "uppercase",
                     }}
                     onClick={() => {
-                      setRating(1)
                       setPrice(item?.sizeDetails?.price);
                       setOrderId(i.orderId);
                       setProduct(item.product);
